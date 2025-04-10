@@ -9,8 +9,15 @@ name: 'AppAbout',
 
 <template>
 
+    <h1 class="my_title text-center">CHI SONO?</h1>
+
 </template>
 
-<style>
+<style scoped>
+
+.my_title {
+  padding: 5rem;
+  
+}
 
 </style>

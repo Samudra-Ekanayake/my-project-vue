@@ -1,6 +1,7 @@
-<script setup>
+<script>
 import axios from "axios";
-import { ref } from 'vue'
+import imgSamudra from '../assets/IMG_9319.jpeg'
+/* import { ref } from 'vue' */
 
 export default {
   name: 'AppHome',
@@ -11,6 +12,7 @@ export default {
 
       baseUrl: 'http://127.0.0.1:8030',
       projects: '',
+      imgSamudra,
 
     }
 
@@ -31,53 +33,54 @@ export default {
 
 <template>
 
-<h1>I miei progetti</h1>
+  <div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5">
+      <h1 class="display-5 fw-bold">Samudra Ekanayake</h1>
 
-<div class="container">
-  <div class="row">
-    <div class="col g-5" v-for="project in projects.data">
-      <div class="card p-3" style="width: 20rem;">
+      <div class="d-flex justify-content-between align-items-start">
 
-        <template v-if="!project.cover_image.startsWith('http')">
-          <img :src="baseUrl + '/storage/' + project.cover_image" class="card-img-top" alt="...">
-        </template>
-        <template v-else>
-          <img :src="project.cover_image" class="card-img-top" alt="...">
-        </template>
+        <div class="row">
 
-        <div class="card-body">
-          <h5 class="card-title">{{ project.name }}</h5>
-          <a href="#" class="btn btn-primary">Dettagli</a>
-        </div>
+        <p class="col-md-8 col-sm-1 fs-4">
+          Junior Full Stack developer
+        </p>
+
+        <h2>Competenze</h2>
+        <ul class="list-unstyled"> 
+          <li>HTML &nbsp;<i class="fa-brands fa-html5 fs-5" ></i> </li> 
+          <li>CSS &nbsp;<i class="fa-brands fa-css3 fs-5"></i></li>
+          <li>BOOTSTRAP  &nbsp;<i class="fa-brands fa-bootstrap fs-5"></i></li>
+          <li>JAVASCRIPT  &nbsp;<i class="fa-brands fa-js fs-5"></i></li>
+          <li>VUE.JS  &nbsp;<i class="fa-brands fa-vuejs fs-5"></i></li>
+          <li>NODE.JS  &nbsp;<i class="fa-brands fa-node fs-5"></i></li>
+          <li>VITE  &nbsp;<i class="fa-brands fa-vuejs fs-5"></i></li>
+          <li>PHP  &nbsp;<i class="fa-brands fa-php fs-5"></i></li>
+          <li>LARAVEL  &nbsp;<i class="fa-brands fa-laravel fs-5"></i></li>
+          <li>MYSQL  &nbsp;<i class="fa-solid fa-database fs-5"></i></li>
+        </ul>
+
+
       </div>
-    </div>
-    <nav aria-label="Page navigation">
-      <ul class="pagination    ">
-        <li class="page-item disabled">
-          <a class="page-link" href="#" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
-          </a>
-        </li>
-        <li class="page-item active" aria-current="page">
-          <a class="page-link" href="#">1</a>
-        </li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item">
-          <a class="page-link" href="#">3</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Next">
-            <span aria-hidden="true">&raquo;</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
 
+        <div>
+          <img :src="imgSamudra" alt="" class="rounded-circle my_image">
+        </div>
+
+      </div>
+
+      <p>Ciao, benvenuto nel mio sito portfolio! <br>
+        Qui potrai vedere tutti i miei progetti fatti fino ad ora</p>
+
+    </div>
   </div>
-</div>
+
 
 </template>
 
 <style scoped>
+.my_image {
+  width: 14rem;
+  margin-right: 8rem;
 
+}
 </style>

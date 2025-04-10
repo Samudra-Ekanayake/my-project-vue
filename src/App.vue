@@ -5,24 +5,20 @@ import AppHeader from './components/AppHeader.vue'
 export default {
   name: 'App',
 
+  components: {
+    AppHeader,
+  },
+
   data() {
 
     return {
-
-      baseUrl: 'http://127.0.0.1:8030',
-      projects: '',
 
     }
 
   },
 
   mounted() {
-    axios
-      .get(`${this.baseUrl}/api/project`)
-      .then(response => {
-        console.log(response)
-        this.projects = response.data.projects
-      })
+   
 
   },
 }
@@ -32,7 +28,8 @@ export default {
 
 <template>
 
-  <AppProject></AppProject>
+  <AppHeader />
+  <router-view />
 
 </template>
 
