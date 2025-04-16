@@ -32,8 +32,8 @@ export default {
 </script>
 
 <template>
-
-  <div class="p-5 mb-4 bg-light rounded-3">
+  
+  <div class="p-5 mb-4  my_jumbotron rounded-3"> <!-- bg-light -->
     <div class="container-fluid py-5">
       <h1 class="display-5 fw-bold">Samudra Ekanayake</h1>
 
@@ -69,7 +69,7 @@ export default {
       </div>
 
       <p>Ciao, benvenuto nel mio sito portfolio! <br>
-        Qui potrai vedere tutti i miei progetti fatti fino ad ora</p>
+        Qui potrai vedere tutti i miei progetti fatti fino ad ora.</p>
 
     </div>
   </div>
@@ -79,8 +79,12 @@ export default {
 
 <style scoped>
 .my_image {
-  width: 14rem;
+  width: 16rem;
   margin-right: 8rem;
-
 }
+ .my_jumbotron {
+  background-color: #7297A7;
+ }
+
+
 </style>

@@ -38,17 +38,18 @@ export default {
     <div class="row px-5">
       <div class="col gy-5" v-for="project in projects.data">
         <div class="card" style="width: 20rem;">
+          <div class="border">
+            <template v-if="!project.cover_image.startsWith('http')">
+              <img :src="baseUrl + '/storage/' + project.cover_image" class="card-img-top" alt="...">
+            </template>
+            <template v-else>
+              <img :src="project.cover_image" class="card-img-top" alt="...">
+            </template>
+          </div>
 
-          <template v-if="!project.cover_image.startsWith('http')">
-            <img :src="baseUrl + '/storage/' + project.cover_image" class="card-img-top" alt="...">
-          </template>
-          <template v-else>
-            <img :src="project.cover_image" class="card-img-top" alt="...">
-          </template>
-
-          <div class="card-body ">
+          <div class="card-body my_card">
             <h5 class="card-title">{{ project.name }}</h5>
-            <a href="#" class="btn btn-primary">Dettagli</a>
+            <RouterLink :to="{name: 'project', params: {id: project.id}}" class="btn btn-dark">Dettagli</RouterLink>
           </div>
         </div>
       </div>
@@ -82,5 +83,9 @@ export default {
 <style scoped>
 .my_title {
   padding-top: 5rem;
+}
+
+.my_card {
+  background-color: #7B9AAC;
 }
 </style>
