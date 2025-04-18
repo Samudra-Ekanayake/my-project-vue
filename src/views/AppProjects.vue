@@ -36,7 +36,7 @@ export default {
 
   <div class="container">
     <div class="row px-5">
-      <div class="col gy-5" v-for="project in projects.data">
+      <div class="col-lg-4  col-md-6 col-sm-12 gy-5 d-flex justify-content-center" v-for="project in projects.data">
         <div class="card" style="width: 20rem;">
           <div class="border">
             <template v-if="!project.cover_image.startsWith('http')">
@@ -47,9 +47,9 @@ export default {
             </template>
           </div>
 
-          <div class="card-body my_card">
+          <div class="card-body bg-light my_card">
             <h5 class="card-title">{{ project.name }}</h5>
-            <RouterLink :to="{name: 'project', params: {id: project.id}}" class="btn btn-dark">Dettagli</RouterLink>
+            <RouterLink :to="{ name: 'project', params: { id: project.id } }" class="btn btn-dark">Dettagli</RouterLink>
           </div>
         </div>
       </div>
