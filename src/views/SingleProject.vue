@@ -58,7 +58,7 @@ export default {
                     <div class="card-body my_card mt-4">
                         <p class="card-text">{{ project.description }}</p>
                         <p class="my_font">Data di creazione:{{ project.creation_date }}</p>
-                        <RouterLink to="/projects" class="btn btn-primary">indietro</RouterLink>
+                        <RouterLink to="/projects" class="btn btn-dark">progetti</RouterLink>
                     </div>
                 </div>
             </div>

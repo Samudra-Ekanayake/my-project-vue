@@ -37,35 +37,53 @@ export default {
     <div class="container-fluid py-5">
       <h1 class="display-5 fw-bold">Samudra Ekanayake</h1>
 
-      <div class="d-flex justify-content-between align-items-start">
+      <div class="container">
 
         <div class="row">
 
-          <p class="col-md-8 col-sm-1 fs-4">
+          <p class="fs-4">
             Junior Full Stack developer
           </p>
+          <div class="col-3">
+            <h2>Competenze</h2>
+            <ul class="list-unstyled">
+              <li>HTML &nbsp;<i class="fa-brands fa-html5 fs-5"></i> </li>
+              <li>CSS &nbsp;<i class="fa-brands fa-css3 fs-5"></i></li>
+              <li>BOOTSTRAP &nbsp;<i class="fa-brands fa-bootstrap fs-5"></i></li>
+              <li>JAVASCRIPT &nbsp;<i class="fa-brands fa-js fs-5"></i></li>
+              <li>VUE.JS &nbsp;<i class="fa-brands fa-vuejs fs-5"></i></li>
+              <li>NODE.JS &nbsp;<i class="fa-brands fa-node fs-5"></i></li>
+              <li>VITE &nbsp;<i class="fa-brands fa-vuejs fs-5"></i></li>
+              <li>PHP &nbsp;<i class="fa-brands fa-php fs-5"></i></li>
+              <li>LARAVEL &nbsp;<i class="fa-brands fa-laravel fs-5"></i></li>
+              <li>MYSQL &nbsp;<i class="fa-solid fa-database fs-5"></i></li>
+            </ul>
+          </div>
 
-          <h2>Competenze</h2>
-          <ul class="list-unstyled">
-            <li>HTML &nbsp;<i class="fa-brands fa-html5 fs-5"></i> </li>
-            <li>CSS &nbsp;<i class="fa-brands fa-css3 fs-5"></i></li>
-            <li>BOOTSTRAP &nbsp;<i class="fa-brands fa-bootstrap fs-5"></i></li>
-            <li>JAVASCRIPT &nbsp;<i class="fa-brands fa-js fs-5"></i></li>
-            <li>VUE.JS &nbsp;<i class="fa-brands fa-vuejs fs-5"></i></li>
-            <li>NODE.JS &nbsp;<i class="fa-brands fa-node fs-5"></i></li>
-            <li>VITE &nbsp;<i class="fa-brands fa-vuejs fs-5"></i></li>
-            <li>PHP &nbsp;<i class="fa-brands fa-php fs-5"></i></li>
-            <li>LARAVEL &nbsp;<i class="fa-brands fa-laravel fs-5"></i></li>
-            <li>MYSQL &nbsp;<i class="fa-solid fa-database fs-5"></i></li>
-          </ul>
 
+          
+          <div class="col-6">
+            <h2 class="mb-3">Formazione</h2>
 
+            <ul class="list-unstyled">
+              <li><h4>Master Full Stack Web Developer</h4></li>
+              <li>Boolean (Febbraio 2024 - Settembre 2024)</li>
+            </ul>
+
+            <ul class="list-unstyled">
+              <li><h4>Operatore Elettrico Civile/Industriale</h4></li>
+              <li>Qualifica triennale presso
+                Enfapi como, Erba (2014)</li>
+            </ul>
+
+          </div>
+          
+          
+          <div class="col-3">
+            <img :src="imgSamudra" alt="" class="rounded-circle my_image">
+          </div>
+          
         </div>
-
-        <div>
-          <img :src="imgSamudra" alt="" class="rounded-circle my_image">
-        </div>
-
       </div>
 
       <p>Ciao! Benvenuto sul mio sito portfolio! <br>
@@ -108,7 +126,7 @@ export default {
 
   <div class="container-fluid mt-3">
     <div class="container">
-      <h1 class="text-center display-5 fw-bold mb-3">Esperienze Lavorative</h1>
+      <h1 class="text-center display-5 fw-bold mb-4">Esperienze Lavorative</h1>
       <div class="accordion accordion-flush" id="accordionFlushExample">
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingOne">
@@ -221,7 +239,8 @@ export default {
 <style scoped>
 .my_image {
   width: 16rem;
-  margin-right: 8rem;
+  position: relative;
+  bottom: 2rem;
 }
 
 .my_jumbotron {
