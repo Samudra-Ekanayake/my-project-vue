@@ -44,7 +44,7 @@ export default {
           <p class="fs-4">
             Junior Full Stack developer
           </p>
-          <div class="col-3">
+          <div class="col-lg-3">
             <h2>Competenze</h2>
             <ul class="list-unstyled">
               <li>HTML &nbsp;<i class="fa-brands fa-html5 fs-5"></i> </li>
@@ -62,7 +62,7 @@ export default {
 
 
           
-          <div class="col-6">
+          <div class="col-lg-6">
             <h2 class="mb-3">Formazione</h2>
 
             <ul class="list-unstyled">
@@ -79,7 +79,7 @@ export default {
           </div>
           
           
-          <div class="col-3">
+          <div class="col-lg-3">
             <img :src="imgSamudra" alt="" class="rounded-circle my_image">
           </div>
           
@@ -100,7 +100,7 @@ export default {
 
     <div class="container">
       <div class="row px-5">
-        <div class="col gy-5 d-flex justify-content-center" v-for="project in projects">
+        <div class="col-lg-4 col-sm-12 gy-5 d-flex justify-content-center" v-for="project in projects">
           <div class="card" style="width: 20rem;">
             <div class="border">
               <template v-if="!project.cover_image.startsWith('http')">

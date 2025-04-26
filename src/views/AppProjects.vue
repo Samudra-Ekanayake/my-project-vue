@@ -81,6 +81,11 @@ export default {
 </template>
 
 <style scoped>
+
+body{
+  background-color: #7B9AAC;
+}
+
 .my_title {
   padding-top: 5rem;
 }
